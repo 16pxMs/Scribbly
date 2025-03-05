@@ -22,33 +22,48 @@
             </nav>
     
         </header>
-
+        <!-- card buttons section -->
         <section class="buttonCardSection">
             
-            <span class="buttonCard">
-                <img src="/Icons/plus.svg"/>
-                <p class="buttonText button">New note</p>
+            <span class="buttonCard left">
+                <img class="documentImg" src="/Images/Document illustration.png"/>
+
+                <div class="iconTextContainer">
+                    <img class="icon add" src="/Icons/plus.svg"/>
+                    <p class="buttonText button">New note</p>
+                </div>
+                
             </span>
 
-            <span class="buttonCard">
-                <img src="/Icons/plus.svg"/>
-                <p class="buttonText button">New task</p>
+            <span class="buttonCard right">
+                <img class="taskImg" src="/Images/Task illustration.png"/>
+                
+                <div class="iconTextContainer">
+                    <img class="icon add" src="/Icons/plus.svg"/>
+                    <p class="buttonText button">New task</p>
+                </div>
+                
             </span>
 
-            
+        
         </section>
+
+
+        <!-- recent section -->
 
         <section class="recents">
             <h5>Recents</h5>
 
-            <div class="SegmentControl">
+            <!-- segment control-->
+
+            <div class="segmentControl">
                 <fieldset role="radiogroup" aria-label="Segment Control">
                     <label>
-                        <input type="radio" name="segment" value="option1" checked> Notes
+                        <input type="radio" name="segment" value="option1" checked> <span>Notes</span>
                     </label>
 
                     <label>
-                        <input type="radio" name="segment" value="option1"> Tasks
+                        <input type="radio" name="segment" value="option1"> <span>Tasks</span>
                     </label>
 
                 </fieldset>

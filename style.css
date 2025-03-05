@@ -6,8 +6,41 @@
 
 :root {
     font-size: 100%;
+
+    /* Variables */
+
+    --primary-blue-100: hsl(254, 100%, 90%);
+    --primary-blue-500: hsl(254, 100%, 69%);
+    --primary-blue-900: hsl(253, 46%, 29%);
+    --neutral-violet-500: hsl(259, 8%, 41%);
+    --neutral-violet-700: hsl(260, 8%, 29%);
+    --neutral-violet-800: hsl(260,8%, 23%);
+    --accent-yellow-500: hsl(44, 100%, 90%);
+    --accent-blue-100:var(--primary-blue-100);
+
+    /* Text colors */
+    --text-title: var(--primary-blue-900);
+    --text-title2: var(--neutral-violet-500);
+    --text-body: var(--neutral-violet-700);
+
+    /* Background */
+    --background-grey: hsl(270, 7%, 97%);
+    --background-grey-100: hsl(270, 7%, 94%);
+
+    /* button */
+
+    --button-primary: var(--primary-blue-500);
+
+    /* icons */
+    --icon-default: var(--neutral-violet-500);
+    --icon-dark: var(--neutral-violet-800);
+
+
+
 }
 
+
+/* typography */
 
 /* rubik-regular - latin */
 @font-face {
@@ -26,7 +59,164 @@
     src: url('/fonts/rubik-v28-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
-  body {
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
+
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+}
+
+
+ul{
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+
+.documentImg {
+  max-width: 30%;
+  height: auto;
+  display: block;
+}
+
+.taskImg {
+  max-width: 30%;
+  height: auto;
+  display: block;
+}
+
+.iconTextContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.icon {
+  max-width: 24px;
+  height: 24px;
+  fill: var(--icon-dark);
+}
+
+.buttonCardSection {
+  display: flex;
+  gap: 1em;
+}
+
+.buttonText {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-title);
+}
+
+.left {
+  background-color: var(--accent-blue-100);
+}
+.right {
+  background-color:var(--accent-yellow-500);
+
+}
+
+/* segment control */
+
+.recents {
+  margin: 0 1em ;
+}
+
+h5 {
+  font-weight: 400;
+  color: var(--text-title2);
+  margin: 0 0 1em 0;
+}
+
+.segmentControl {
+  border-radius: 8px;
+  background: var(--background-grey-100);
+  padding: 0.125em;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  gap: 0.25em;
+}
+
+input[type="radio"] {
+
+  -webkit-appearance: none;
+
+  -moz-appearance: none;
+
+  appearance: none;
+
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+
+}
+
+
+label {
+  flex: 1; /* Makes each label expand equally */ 
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  display: flex; 
+  align-items: center; 
+  color: var(--text-title2)
+}
+
+label span {
+  display: flex; /* Makes span behave like a block */
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: 2em;
+  overflow: hidden; /* Ensures rounded corners look clean */
+  text-align: center;
+}
+
+.segmentControl input[type="radio"]:checked + span {
+  background-color: white;
+  font-weight: 400;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: var(--text-title2)
+}
+
+
+@media screen and (min-width: 20em) {
+  
+  header{
+    margin: 1em 1em 0 1em;
   }
+
+  .buttonCardSection {
+    margin: 1em;
+  }
+
+  .buttonCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0 0 0;
+    border-radius: 16px;
+    width: 10.3125em;
+    
+  }
+
+
+.documentImg {
+  max-width: 48px;
+  height: auto;
+}
+
+.taskImg {
+  max-width: 48px;
+  height: auto;
+}
+}
+
