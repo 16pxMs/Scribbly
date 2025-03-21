@@ -210,6 +210,16 @@ label span {
   cursor: pointer;
 }
 
+#backButtonTop:hover  {
+  background: var(--neutral-violet-500);
+  color: var(--global-white);
+}
+
+#backButtonTop:hover .leftarrow {
+  stroke: var(--global-white); 
+}
+
+
 #newNoteTextArea {
   margin: auto;
   padding: 1em;
@@ -227,7 +237,7 @@ label span {
   outline: none;
 }
 
-
+/* button -- save and clear */
 .actButtonWrapper {
   display: flex;
   gap: 1em;
@@ -251,6 +261,10 @@ label span {
 #saveButton {
   background-color: var(--button-primary);
   color: var(--button-text-primary);
+}
+
+#saveButton:hover {
+  background-color: var(--primary-blue-900);
 }
 
 #clearButton {
@@ -320,7 +334,7 @@ label span {
   }
 
 
-  .card {
+  #cardHistory {
     display: flex;
     flex-direction: column;
     background-color: var(--background-grey);
