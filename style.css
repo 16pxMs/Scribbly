@@ -17,24 +17,37 @@
     --neutral-violet-800: hsl(260,8%, 23%);
     --accent-yellow-500: hsl(44, 100%, 90%);
     --accent-blue-100:var(--primary-blue-100);
+    --destructive-100: hsl(337, 100%, 96%);
+    --destructive-500: hsl(336, 100%, 71%);
+    --global-white: hsl(0, 0%, 100%);
 
     /* Text colors */
     --text-title: var(--primary-blue-900);
     --text-title2: var(--neutral-violet-500);
     --text-body: var(--neutral-violet-700);
+    --button-text-primary:var(--global-white);
 
     /* Background */
     --background-grey: hsl(270, 7%, 97%);
     --background-grey-100: hsl(270, 7%, 94%);
+    --background-grey-50: hsl(255, 10%, 96%);
 
     /* button */
 
     --button-primary: var(--primary-blue-500);
+    --button-destructive: var(--destructive-100);
+    --button-destructive-hover: var(--destructive-500);
 
     /* icons */
     --icon-default: var(--neutral-violet-500);
     --icon-dark: var(--neutral-violet-800);
 
+    /* shadow */
+    --shadow-100: hsl(0, 0%, 80%);
+
+    --input-background: var(--background-grey-50);
+
+   
 
 
 }
@@ -74,7 +87,11 @@ li {
   list-style-type: none;
 }
 
-
+.buttonCard:hover {
+  box-shadow: 0 0 8px var(--shadow-100);
+  cursor: pointer;
+  
+}
 
 .iconTextContainer {
   display: flex;
@@ -145,7 +162,7 @@ label {
 }
 
 label span {
-  display: flex; /* Makes span behave like a block */
+  display: flex; 
   justify-content: center; 
   align-items: center; 
   width: 100%; 
@@ -174,9 +191,84 @@ label span {
   color: var(--text-body);
 }
 
+/* styling on new notes page*/
+/* text area on new notes page  */
 
+
+
+#backButtonTop {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 12px 2px 8px;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--background-grey-100);
+  font-family: inherit;
+  color: var(--text-body);
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#newNoteTextArea {
+  margin: auto;
+  padding: 1em;
+  resize: none;
+  max-width: 40em;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--input-background);
+  color: var(--text-body);
+  font-family: inherit;
+}
+
+#newNoteTextArea:focus, :disabled {
+  outline: none;
+}
+
+
+.actButtonWrapper {
+  display: flex;
+  gap: 1em;
+  width: 90%;
+
+}
+
+.roundButton {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 16px;
+  flex: 1;
+  max-width: none;
+  text-align: center;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#saveButton {
+  background-color: var(--button-primary);
+  color: var(--button-text-primary);
+}
+
+#clearButton {
+  background-color: var(--button-destructive);
+  color: var(--text-body);
+}
+
+#clearButton:hover {
+  background-color: var(--button-destructive-hover);
+  color: var(--destructive-100)
+
+
+}
+
+/* media query mobile devices min 320px */
 @media screen and (min-width: 20em) {
   
+ 
   header{
     margin: 1em 1em 0 1em;
   }
@@ -239,9 +331,32 @@ label span {
     border-radius: 16px;
   }
 
+  /* new note page */
+
+  .section {
+    margin: 1em;
+  }
+
+
+  .actionButtons {
+    margin: 1em;
+  }
+
+  .actButtonWrapper {
+  position: absolute;
+  bottom:32px;
+  left:16px;
+  right:16px;
+  /* margin: 0 0 1em 0; */
+
+  }
+
+
+
+
 }
 
-
+/* web media query */
 
 @media screen and (min-width: 60em) {
 
@@ -316,4 +431,26 @@ label span {
     gap: 1.5em;
   }
 
+  /* NNewNotePage */
+
+  .textArea {
+    margin: 0 0 1em 0;
+  }
+
+  .actionButtons {
+    max-width: 0em;
+    width: 100%;
+    margin: auto;
+  }
+
+  .actButtonWrapper {
+    position: static;
+    max-width: 0em;
+    width: 100%;
+    margin: auto;
+
+  }
+
+ 
+  
 }

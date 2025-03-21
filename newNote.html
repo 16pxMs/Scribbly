@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>
+            New note
+        </title>
+        <link rel="stylesheet" href="style.css"/>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+        <title>Scribly</title>
+        <link rel="stylesheet" href="/style.css"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest"> 
+    </head>
+
+    <body>
+
+         <!-- Top navigation section -->
+         <header>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="/Images/Logo1.svg" alt="scribbly logo in dark purple color svg">
+                    </li>
+                </ul>
+            </nav>
+    
+        </header>
+
+        <section class="backButton section">
+            <div>
+                <button id="backButtonTop"> 
+                    <img class="icon leftarrow" src="/Icons/arrow-narrow-left.svg" alt="left Arrow icon"> Back 
+                </button>
+            </div>
+        </section>
+
+        <!-- notes page -->
+
+        <section class="inputArea section">
+            <fieldset class="textArea">
+                <textarea name="newNote" placeholder="Type your note here…" id="newNoteTextArea" autofocus></textarea>
+            </fieldset>
+        </section>
+
+        <!-- Action buttons -->
+
+        <section class="actionButtons section">
+            <div class="actButtonWrapper"> 
+
+                <!-- clear button -->
+               
+                    <button id="clearButton" class="roundButton">
+                        Clear
+                    </button>
+                
+
+                <!-- Save button -->
+               
+                    <button id="saveButton" class="roundButton">
+                        Save
+                    </button>
+            
+            </div>
+        </section>
+
+
+
+
+        <script src="/NewNote.js"></script>
+
+    </body>
+</html>
