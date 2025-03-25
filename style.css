@@ -338,7 +338,7 @@ label span {
     display: flex;
     flex-direction: column;
     background-color: var(--background-grey);
-    `max-width: 40em;
+    max-width: 40em;
     width: 100%;
     height: auto;
     padding: 1em;
