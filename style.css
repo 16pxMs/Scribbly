@@ -338,7 +338,7 @@ label span {
     display: flex;
     flex-direction: column;
     background-color: var(--background-grey);
-    max-width: 40em;
+    `max-width: 40em;
     width: 100%;
     height: auto;
     padding: 1em;
@@ -445,26 +445,50 @@ label span {
     gap: 1.5em;
   }
 
-  /* NNewNotePage */
+  /* NewNotePage */
 
   .textArea {
     margin: 0 0 1em 0;
   }
 
-  .actionButtons {
-    max-width: 0em;
-    width: 100%;
-    margin: auto;
+  /* buttons */
+  
+  /* .actionButtons section {
+    display: flex;
+    justify-self: end;
+    margin: 67px;
+    
+    
   }
 
   .actButtonWrapper {
     position: static;
     max-width: 0em;
     width: 100%;
-    margin: auto;
+    
+    
 
+  } */
+  .actionButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em; 
+    max-width: 40em; /* Match the max-width of your textarea */
+    margin-left: auto;
+    margin-right: auto;
   }
-
+  
+  .actButtonWrapper {
+    position: static; /* Remove absolute positioning for desktop */
+    max-width: none; 
+    width: auto; 
+    justify-content: flex-end; 
+  }
+  
+  .roundButton {
+    flex: 0; 
+    min-width: 100px; 
+  }
+}
  
   
-}

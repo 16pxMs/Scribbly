@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const saveButton = document.getElementById("saveButton")
     const clearButton = document.getElementById("clearButton")
     const textInput = document.getElementById("newNoteTextArea")
-    const historyList = documentElement.getElementById("cardHistory")
+    const historyList = document.getElementById("cardHistory")
 
     backButton.addEventListener("click", function() {
         const previousPage = window.open("index.html", "_self")``
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const noteText = textInput.value.trim()
 
         // next we check if a user has actually types somwthin into the input box
-``
+
         if (noteText) {
             let notes = JSON.parse(localStorage.getItem("userNotes")) || []
 
@@ -28,11 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem("userNotes",JSON.stringify(notes))
 
             textInput.value = ""
-
-            const lines = noteText.split('\n')
-            const title = lines[0]
-            const preview = lines.length > 1 ? lines.slice(1).join('\n').substring(0, 50) + '...' : ''
-
 
             console.log("Note saved to localStorage:", noteText)
             // alert("Note saved successfully!")
@@ -47,10 +42,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     function updateRecentList () {
-        if(!historyList) {
+        if(historyList) {
+
             console.log("Recents list element not found. Add a div with id 'recentsList' to your HTML.")
             return
         }
+
+         // here check to see 
+         const notes = JSON.parse(localStorage.getItem("userNotes")) || []
+         historyList.innerHTML = '' // Clear current list
+
+        const lines = noteText.split('\n')
+            const title = lines[0] || 'Untitled'
+            const preview = lines.length > 1 ? lines.slice(1).join('\n').substring(0, 50) + '...' : ''
+
+            // render linnes so users can see it o home page after clicking save
+
+            historyList.innerHTML = cardHistory
+
     }
 
 
